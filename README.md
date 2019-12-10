@@ -15,3 +15,8 @@ This repo hosts a copy of https://haxx.in/upc_keys.c for archiving purposes.
 Make sure to install ```gcc-multilib``` and ```libssl-dev:i386``` and then compile with
 
     gcc -m32 -static -O2 -o upc_keys upc_keys.c -lcrypto
+
+# Cross-compiling for Windows (Debian/Ubuntu)
+Make sure to install ```gcc-mingw-w64``` and the OpenSSL library then compile with
+
+    i686-w64-mingw32-gcc -static -O2 -o upc_keys.exe upc_keys.c -lcrypto
