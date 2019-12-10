@@ -10,3 +10,8 @@ This repo hosts a copy of https://haxx.in/upc_keys.c for archiving purposes.
 
 # Compiling to be portable (static linking)
     gcc -static -O2 -o upc_keys upc_keys.c -lcrypto
+
+# Compiling x86-32 on x86-64 (Debian/Ubuntu)
+Make sure to install ```gcc-multilib``` and ```libssl-dev:i386``` and then compile with
+
+    gcc -m32 -static -O2 -o upc_keys upc_keys.c -lcrypto
